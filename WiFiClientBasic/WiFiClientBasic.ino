@@ -49,8 +49,8 @@ void setup()
 
   // We start by connecting to a WiFi network
   //WiFiMulti.addAP("wifi-zone-ufam");
-  WiFiMulti.addAP("ICOMP_1A", "****");
-  WiFiMulti.addAP("wifi-zone-ufam-1");
+  //WiFiMulti.addAP("ICOMP_1A", "****");
+  WiFiMulti.addAP("Lily_Wi-Fi5", "NyxCut3!");
 
   Serial.println();
   Serial.println();
@@ -97,10 +97,12 @@ void loop()
   /*
    * Mude aqui o arquivo a ser baixado, apenas github allowed
    */
-  // https://raw.githubusercontent.com/diogosm/tp2_CsF_2024-1/master/output/file_5000.txt
-  //http.begin("https://raw.githubusercontent.com/diogosm/tp2_CsF_2024-1/master/output/file_500.txt"); // Mude para um link de tamanho fixo
-  //http.begin("https://raw.githubusercontent.com/diogosm/tp2_CsF_2024-1/master/output/file_5000.txt"); 
-  http.begin(*client, "https://raw.githubusercontent.com/diogosm/tp2_CsF_2024-1/master/output/file_5000.txt"); 
+   
+  // https://raw.githubusercontent.com/RCCMclovin/CSF-TP2/refs/heads/master/output/file_500.txt
+  // https://raw.githubusercontent.com/RCCMclovin/CSF-TP2/refs/heads/master/output/file_5000.txt
+  // https://raw.githubusercontent.com/RCCMclovin/CSF-TP2/refs/heads/master/output/file_10000.txt
+  // https://raw.githubusercontent.com/RCCMclovin/CSF-TP2/refs/heads/master/output/file_5000000.txt
+  http.begin(""); // Mude para um link de tamanho fixo
   int httpCode = http.GET();
 
   if (httpCode > 0) {
